@@ -1,4 +1,70 @@
-@import "tailwindcss";
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    outline: 0;
+    font-family: sans-serif;
+    background-color: #000000;
+}
+
+.blob-outer-container {
+    position: fixed;
+    height: 100%;
+    width: 100%;
+    z-index: 0;
+    inset: 0;
+    margin: auto;
+    filter: blur(100px);
+}
+
+.blob-inner-container {
+    border-radius: 99999px;
+    position: absolute;
+    inset: 0;
+    margin: auto;
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+    background-color: #fff;
+    transform: scale(0.8);
+}
+
+.blob {
+    position: absolute;
+    width: 100vw;
+    height: 100vh;
+    inset: 0;
+    margin: auto;
+    background: conic-gradient(from 0deg, rgb(255, 0, 98), rgb(255, 0, 149), #cc00ff, #8c00ff, #6026ab, rgb(17, 0, 255));
+    animation: spinBlob 8s linear infinite;
+}
+
+@keyframes spinBlob {
+    0% {
+        transform: rotate(0deg) scale(3); /* Aumente a escala inicial para garantir que cubra telas menores */
+    }
+
+    100% {
+        transform: rotate(1turn) scale(3); /* Aumente a escala final */
+    }
+}
+
+/* Adicione media queries para dispositivos menores */
+@media (max-width: 768px) {
+    .blob-outer-container {
+        filter: blur(50px); /* Reduza o blur para melhor performance em dispositivos móveis */
+    }
+
+    .blob-inner-container {
+        transform: scale(1); /* Remova a escala para que o blob ocupe mais espaço */
+    }
+
+    @keyframes spinBlob {
+        0% {
+            transform: rotate(0deg) scale(4); /* Aumente ainda mais a escala para garantir que o efeito cubra a tela */
+        }
+        100% {
+            transform: rotate(1turn) scale(4);
+        }
+    }
+}

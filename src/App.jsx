@@ -1,9 +1,14 @@
 function App() {
   return (
     <>
-      <h1 className="text-3xl font-bold underline text-pink-300">
-        Olá, mundo com Tailwind!
-      </h1>
+    {/* Fudo animado */}
+    
+      <div className="blob-outer-container">
+        <div className="blob-inner-container">
+          <div className="blob"></div>
+        </div>
+      </div>
+
     </>
   );
 }
