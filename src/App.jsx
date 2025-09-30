@@ -1,5 +1,5 @@
 import { FaArrowUpRightFromSquare } from "react-icons/fa6";
-import Header from "./Comoponents/Header";
+import Header from "./Components/Header";
 
 function App() {
   return (
@@ -21,10 +21,10 @@ function App() {
           <p className="pb-1 text-[17px]">I'm currently a Software Engineering student at FIAP, and i just love making landing-pages.</p>
           <p className="pb-1 text-[17px]">Here you can check out some of my projects and also get to know me more!</p>
           <div className="border-b opacity-65 drop-shadow-[0_0_3px_white]"></div>
-          <p className="pt-3 pb-2 animate-pulse font-medium text-xl">What would you like to do first?</p>
-          <div className="flex justify-center gap-5">
-            <a href="" className="flex items-center gap-3 text-xl font-semibold transition relative after:content-[''] after:absolute after:w-0 after:h-0.5 after:bottom-0 after:left-0 after:bg-current after:transition-all after:duration-300 hover:after:w-full hover:drop-shadow-[0_0_10px_white]">My Projects <FaArrowUpRightFromSquare /></a>
-            <a href="" className="flex items-center gap-3 text-xl font-semibold transition relative after:content-[''] after:absolute after:w-0 after:h-0.5 after:bottom-0 after:left-0 after:bg-current after:transition-all after:duration-300 hover:after:w-full hover:drop-shadow-[0_0_10px_white]">About me <FaArrowUpRightFromSquare /></a>
+          <p className="pt-3 pb-2 animate-pulse font-medium text-[21px]">What would you like to do first?</p>
+          <div className="flex justify-center gap-6">
+            <a href="" className="flex items-center gap-3 text-xl font-semibold transition relative after:content-[''] after:absolute after:w-0 after:h-0.5 after:bottom-0 after:left-0 after:bg-current after:transition-all after:duration-300 hover:after:w-full hover:drop-shadow-[0_0_10px_white]">My Projects <FaArrowUpRightFromSquare size={17}/></a>
+            <a href="" className="flex items-center gap-3 text-xl font-semibold transition relative after:content-[''] after:absolute after:w-0 after:h-0.5 after:bottom-0 after:left-0 after:bg-current after:transition-all after:duration-300 hover:after:w-full hover:drop-shadow-[0_0_10px_white]">About me <FaArrowUpRightFromSquare size={17}/></a>
           </div>
         </div>
       </div>

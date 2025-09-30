@@ -40,7 +40,7 @@ body {
     height: 100vh;
     inset: 0;
     margin: auto;
-    background: conic-gradient(from 0deg, rgb(255, 0, 98), #cc00ff, #6026ab, rgb(17, 0, 255), #8c00ff, #cc00ff);
+    background: conic-gradient(from 0deg, #ff0062, #cc00ff, #6026ab, #1100ff, #8c00ff, #cc00ff, #ff0062);
     animation: spinBlob 5s linear infinite;
 
 }
