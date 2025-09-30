@@ -1,30 +1,56 @@
 import logo from '../imgs/MyLogo.png';
 import { useState, useEffect, useRef } from 'react';
+import { Link } from "react-router-dom";
 
 export default function Header(){
-    const [isPlaying, setIsPlaying] = useState(false);
+    const songs = [
+        "src/songs/shiny.mp4",
+        "src/songs/Clouds.mp4",
+        "src/songs/Im-God.mp4"
+    ];
+    const [currentSongIndex, setCurrentSongIndex] = useState(0);
+    const [isPlaying, setIsPlaying] = useState(true);
     const audioRef = useRef(null);
 
     useEffect(() => {
-        if (audioRef.current) {
-            audioRef.current.volume = 0.3; // Set volume to 30%
+        const audio = audioRef.current;
+        if (audio) {
+            audio.src = songs[currentSongIndex];
+            audio.volume = 0.2;
             if (isPlaying) {
-                audioRef.current.play().catch(() => {
+                audio.play().catch(() => {
                     // Handle autoplay restrictions by browsers
                 });
-                audioRef.current.muted = false;
+                audio.muted = false;
             } else {
-                audioRef.current.muted = true;
+                audio.pause();
+                audio.muted = true;
             }
         }
-    }, [isPlaying]);
+    }, [currentSongIndex, isPlaying, songs]);
+
+    useEffect(() => {
+        const audio = audioRef.current;
+        if (audio) {
+            const handleEnded = () => {
+                if (isPlaying) {
+                    const nextIndex = (currentSongIndex + 1) % songs.length;
+                    setCurrentSongIndex(nextIndex);
+                }
+            };
+            audio.addEventListener('ended', handleEnded);
+            return () => audio.removeEventListener('ended', handleEnded);
+        }
+    }, [currentSongIndex, isPlaying, songs]);
 
     return (
             <header className="absolute top-0 left-0 w-full z-[60]">
                 <nav className="">
                     <div className="flex justify-between items-center w-full text-white">
-                        <div className="drop-shadow-[0_0_10px_white] transition ease-in hover:drop-shadow-[0_0_15px_white] hover:scale-115">
-                            <a href="#" className="hover:cursor-pointer "><img src={logo} alt="ByAurea logo" className='h-13 pl-10 mt-7'/></a>
+                        <div className="drop-shadow-[0_0_10px_white] transition ease-in hover:drop-shadow-[0_0_15px_white] hover:scale-125">
+                            <Link to="/">
+                                <img src={logo} alt="ByAurea logo" className='h-13 pl-10 mt-7'/>
+                            </Link>
                         </div>
                         <div className="flex gap-8 pr-10 mt-5 drop-shadow-[0_0_10px_white]">
                             <button className="w-12 h-12 text-[12px] font-medium rounded-full bg-transparent border-2 border-white shadow-[0_0_10px_white] flex items-center justify-center transition duration-300 hover:cursor-pointer
@@ -42,7 +68,7 @@ export default function Header(){
                         </div>
                     </div>
                 </nav>
-                <audio ref={audioRef} src="src/songs/shiny.mp4" autoPlay loop />
+                <audio ref={audioRef} />
             </header>
     )
 }
