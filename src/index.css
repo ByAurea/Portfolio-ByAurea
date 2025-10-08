@@ -1,0 +1,60 @@
+/* Space background styles */
+.space-bg {
+  background: black;
+  position: relative;
+  overflow: hidden;
+  min-height: 100vh;
+}
+
+.star {
+  position: absolute;
+  background: white;
+  border-radius: 50%;
+  animation: twinkle 2s infinite ease-in-out;
+  z-index: 2;
+}
+
+
+
+@keyframes twinkle {
+  0%, 100% { opacity: 0.3; transform: scale(1); }
+  50% { opacity: 1; transform: scale(1.2); }
+}
+
+.blob-outer-container-black {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    z-index: 1;
+    inset: 0;
+    margin: auto;
+    filter: blur(100px);
+}
+
+.blob-inner-container-black {
+    border-radius: 99999px;
+    position: absolute;
+    inset: 0;
+    margin: auto;
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+    transform: scale(0.8);
+}
+
+.blob-black {
+    position: absolute;
+    width: 100vw;
+    height: 100vh;
+    inset: 0;
+    margin: auto;
+    background: linear-gradient(45deg, #000000, #280a2c, #1c0a3d, #0a0938, #000000);
+    background-size: 400% 400%;
+    animation: gradientShift 10s ease infinite;
+}
+
+@keyframes gradientShift {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}

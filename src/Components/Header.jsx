@@ -12,6 +12,7 @@ export default function Header(){
     const [currentSongIndex, setCurrentSongIndex] = useState(0);
     const isPlaying = true;
     const [isMuted, setIsMuted] = useState(true);
+    const [hasStarted, setHasStarted] = useState(false);
     const audioRef = useRef(null);
 
     useEffect(() => {
@@ -20,8 +21,11 @@ export default function Header(){
             audio.src = songs[currentSongIndex];
             audio.volume = 0.2;
             audio.muted = isMuted;
+            if (hasStarted) {
+                audio.play().catch(() => {});
+            }
         }
-    }, [currentSongIndex]);
+    }, [currentSongIndex, hasStarted]);
 
     useEffect(() => {
         const audio = audioRef.current;
@@ -54,9 +58,8 @@ export default function Header(){
                         <div className="flex gap-8 pr-10 mt-5 drop-shadow-[0_0_10px_white]">
                             <button className="w-12 h-12 text-[12px] font-medium rounded-full bg-transparent border-2 border-white shadow-[0_0_10px_white] flex items-center justify-center transition duration-300 hover:cursor-pointer
                             hover:shadow-[0_0_20px_white] hover:animate-pulse " onClick={() => {
-                                const audio = audioRef.current;
-                                if (audio && audio.paused) {
-                                    audio.play().catch(() => {});
+                                if (!hasStarted) {
+                                    setHasStarted(true);
                                 }
                                 setIsMuted(!isMuted);
                             }}>
@@ -67,7 +70,7 @@ export default function Header(){
                                 </svg>
                             </button>
                             <a href="#" className="w-12 h-12 text-[12px] font-medium rounded-full bg-transparent border-2 border-white shadow-[0_0_10px_white] flex items-center justify-center transition duration-300 hover:cursor-pointer
-                            hover:bg-white hover:text-black hover:shadow-[0_0_15px_white] hover:animate-pulse ">PT-BR</a>
+                            hover:bg-white hover:text-black hover:shadow-[0_0_15px_white] hover:animate-pulse">PT-BR</a>
                             <a href="#" className="w-12 h-12 text-[12px] font-medium rounded-full bg-transparent border-2 border-white shadow-[0_0_10px_white] flex items-center justify-center transition duration-300 hover:cursor-pointer
                             hover:bg-white hover:text-black hover:shadow-[0_0_15px_white] hover:animate-pulse ">MENU</a>
                         </div>
