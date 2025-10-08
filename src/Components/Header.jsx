@@ -52,10 +52,10 @@ export default function Header(){
                     <div className="flex justify-between items-center w-full text-white">
                         <div className="drop-shadow-[0_0_10px_white] transition ease-in hover:drop-shadow-[0_0_15px_white] hover:scale-125">
                             <Link to="/">
-                                <img src={logo} alt="ByAurea logo" className='h-13 pl-10 mt-7'/>
+                                <img src={logo} alt="ByAurea logo" className='h-13 pl-20 mt-20'/>
                             </Link>
                         </div>
-                        <div className="flex gap-8 pr-10 mt-5 drop-shadow-[0_0_10px_white]">
+                        <div className="flex gap-8 pr-10 mt-20 mr-13 drop-shadow-[0_0_10px_white]">
                             <button className="w-12 h-12 text-[12px] font-medium rounded-full bg-transparent border-2 border-white shadow-[0_0_10px_white] flex items-center justify-center transition duration-300 hover:cursor-pointer
                             hover:shadow-[0_0_20px_white] hover:animate-pulse " onClick={() => {
                                 if (!hasStarted) {

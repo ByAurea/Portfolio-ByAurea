@@ -1,4 +1,3 @@
-- [ ] Add isMuted state initialized to true in Header.jsx
-- [ ] Modify useEffect to always play audio and set muted based on isMuted
-- [ ] Change button onClick to toggle isMuted instead of isPlaying
-- [ ] Update handleEnded in useEffect to always proceed to next song
+- [x] Update src/Pages/Projects.jsx to add aura logic: state for visibility and mouse position, event handlers, and JSX for aura div
+- [x] Update src/index.css to add .aura CSS class for the white aura effect
+- [x] Test the aura effect by running the app and clicking the button

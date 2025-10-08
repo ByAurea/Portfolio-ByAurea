@@ -1,4 +1,4 @@
-/* Space background styles */
+/* Stars background*/
 .space-bg {
   background: black;
   position: relative;
@@ -21,40 +21,26 @@
   50% { opacity: 1; transform: scale(1.2); }
 }
 
-.blob-outer-container-black {
-    position: absolute;
-    height: 100%;
-    width: 100%;
-    z-index: 1;
-    inset: 0;
-    margin: auto;
-    filter: blur(100px);
+/* Mouse aura */
+
+.aura {
+  position: fixed;
+  width: 700px;
+  height: 700px;
+  background: rgba(224, 198, 255, 0.596);
+  border-radius: 50%;
+  filter: blur(300px);
+  opacity: 0;
+  transition: opacity 2s ease-in-out;
+  z-index: 1;
+  pointer-events: none;
+  animation: pulse;
 }
 
-.blob-inner-container-black {
-    border-radius: 99999px;
-    position: absolute;
-    inset: 0;
-    margin: auto;
-    width: 100vw;
-    height: 100vh;
-    overflow: hidden;
-    transform: scale(0.8);
+.aura.visible {
+  opacity: 1;
 }
 
-.blob-black {
-    position: absolute;
-    width: 100vw;
-    height: 100vh;
-    inset: 0;
-    margin: auto;
-    background: linear-gradient(45deg, #000000, #280a2c, #1c0a3d, #0a0938, #000000);
-    background-size: 400% 400%;
-    animation: gradientShift 10s ease infinite;
-}
-
-@keyframes gradientShift {
-  0% { background-position: 0% 50%; }
-  50% { background-position: 100% 50%; }
-  100% { background-position: 0% 50%; }
+.projectstext{
+  font-style: inherit;
 }
