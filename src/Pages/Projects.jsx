@@ -1,5 +1,6 @@
 import React, { useState, useEffect, useMemo } from 'react';
 import { FaArrowUpRightFromSquare } from "react-icons/fa6";
+import { RiArrowRightUpLine } from 'react-icons/ri';
 
 function Projects() {
 
@@ -55,15 +56,15 @@ function Projects() {
                     <button onClick={() => setAuraVisible(true)} className='bg-white p-2 rounded-2xl drop-shadow-[0_0_7px_white] hover:cursor-pointer hover:scale-115 transition ease-in hover:drop-shadow-[0_0_15px_white] duration-150 animate-pulse hover:animate-none'>Can't see anything?</button>
                 </div>
 
-                <div className=' projectstext relative z-10 flex items-center justify-center mt-20 '>
-                    <h1 className='p-1 border-3 font-light text-6xl '>
-                        <h3 className=' m-5 hover:-skew-x-10 hover:cursor-default hover:underline decoration-4 transition ease-in-ouy duration-200 flex items-center gap-4'> ECOTREND  -  ECOMMERCE <FaArrowUpRightFromSquare size={45}/> </h3>
-                        <h3 className='m-5 hover:-skew-x-10 hover:cursor-default hover:underline decoration-4 transition ease-in-ouy duration-200 flex items-center gap-4  '> MELODIA APP - LANDINGPAGE </h3>
-                        <h3 className='m-5 hover:-skew-x-10 hover:cursor-default hover:underline decoration-4 transition ease-in-ouy duration-200 flex items-center gap-4  '> SISTEMA DE CADASTRO JOGADORAS </h3>
-                        <h3 className='m-5 hover:-skew-x-10 hover:cursor-default hover:underline decoration-4 transition ease-in-ouy duration-200 flex items-center gap-4  '> FLOODSHIELD - LANDING-PAGE </h3>
-                        <h3 className='m-5 hover:-skew-x-10 hover:cursor-default hover:underline decoration-4 transition ease-in-ouy duration-200 flex items-center gap-4  '> AGNELLO - LANDINGPAGE </h3>
+                <div className=' relative z-10 flex items-center justify-center mt-20'>
+                    <div className='p-1 border-4 rounded-3xl font-mono text-5xl text-center flex flex-col items-center drop-shadow-[0_0_60px_Black]'>
+                        <h3 className=' m-1 hover:cursor-default transition ease-in-out duration-300 flex gap-1 drop-shadow-[0_0_25px_black] hover:bg-[#0000002a] rounded-3xl p-1.5'> EcoTrend  -  E-Commerce <RiArrowRightUpLine size={50}/> </h3>
+                        <h3 className='m-1 hover:cursor-default transition ease-in-out duration-300 flex gap-1 drop-shadow-[0_0_25px_black] hover:bg-[#0000002a] rounded-3xl p-1.5'> Melodia App - Landing-Page <RiArrowRightUpLine size={50}/> </h3>
+                        <h3 className='m-1 hover:cursor-default transition ease-in-out duration-300 flex gap-1 drop-shadow-[0_0_25px_black] hover:bg-[#0000002a] rounded-3xl p-1.5'> Sistema de Cadastro <RiArrowRightUpLine size={50}/></h3>
+                        <h3 className='m-1 hover:cursor-default transition ease-in-out duration-300 flex gap-1 drop-shadow-[0_0_25px_black] hover:bg-[#0000002a] rounded-3xl p-1.5'> FloodShield - Landing-Page <RiArrowRightUpLine size={50}/></h3>
+                        <h3 className='m-1 hover:cursor-default transition ease-in-out duration-300 flex gap-1 drop-shadow-[0_0_25px_black] hover:bg-[#0000002a] rounded-3xl p-1.5'> Vinheria Agnello - Landing-Page <RiArrowRightUpLine size={50}/></h3>
 
-                    </h1>
+                    </div>
                 </div>
             </div>
         </>

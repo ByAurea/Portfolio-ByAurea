@@ -27,7 +27,7 @@
   position: fixed;
   width: 700px;
   height: 700px;
-  background: rgba(224, 198, 255, 0.596);
+  background: rgba(224, 198, 255, 0.637);
   border-radius: 50%;
   filter: blur(300px);
   opacity: 0;
@@ -42,5 +42,5 @@
 }
 
 .projectstext{
-  font-style: inherit;
+  color: #0000002a;
 }
