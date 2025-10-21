@@ -72,6 +72,8 @@
   color: #0000002a;
 }
 
+/* grids */
+
 .parent {
 display: grid;
 grid-template-columns: repeat(5, 1fr);
@@ -88,3 +90,37 @@ grid-row-gap: 0px;
 .div6 { grid-area: 5 / 4 / 6 / 5; }
 .div7 { grid-area: 5 / 5 / 6 / 6; }
 
+
+.typewriter-container h1 {
+    /* 1. Fonte monoespaçada para garantir que cada caractere tenha a mesma largura */
+
+    
+    /* 2. Oculta o texto que excede a largura (largura inicial é 0) */
+    overflow: hidden; 
+    
+    /* 3. Evita que o texto quebre a linha */
+    white-space: nowrap; 
+    
+    /* 4. O "cursor" piscando (borda direita) */
+    border-right: 0.15em solid rgb(255, 255, 255); 
+
+    /* 'blink' cria o efeito piscante do cursor */
+    animation: 
+        typing 3s steps(36, end) forwards,
+        blink 0.75s step-end infinite;
+    
+    /* Ajuste o número de passos (36) para a quantidade de caracteres do seu texto */
+    width: 0; /* Largura inicial zero */
+}
+
+/* Animação para expandir a largura */
+@keyframes typing {
+    from { width: 0 }
+    to { width: 44% }
+}
+
+/* Animação para o cursor piscar */
+@keyframes blink {
+    from, to { border-color: transparent }
+    50% { border-color: rgb(255, 255, 255); }
+}

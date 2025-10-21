@@ -61,14 +61,14 @@ return(
                 {stars}
 
 
-                <div className="relative z-10 flex items-center justify-center pt-50 text-white">
-                    <h1 className="text-4xl font-bold">About Me Page</h1>
+                <div className="relative z-10 flex items-center justify-center pt-50 text-white typewriter-container">
+                    <h1 className="text-4xl font-bold tracking-wide">So, I heard you wanted to get to know me more...</h1>
                 </div>
 
                 <div className="parent text-white pt-20 z-550 ">
                 <div className="div1 text-2xl pl-20">
                     
-                <div className='text-4xl font-medium'>A bit of my journey in the IT area</div> <br />
+                <div className='text-4xl font-medium'>Here's a bit of my journey in the IT area</div> <br />
 
                 Hello! My name is Áurea, I’m 19 years old and currently a Software Engineering student at FIAP in São Paulo, Brazil. <br />
                 I’ve loved playing video games since I was a kid, but it took me a while to get my own PC — the one I built myself. <br />
@@ -91,7 +91,7 @@ return(
                 <li className='pb-8 text-xl font-medium'>TAILWIND</li> 
                 <li className='pb-8 text-xl font-medium'>GIT/GITHUB</li> 
                 <li className='pb-8 text-xl font-medium'>WORDPRESS</li> 
-                <li className='pb-8 text-xl font-medium'></li> 
+                <li className='pb-8 text-xl font-medium'>SQL</li> 
 
 
                 </div>
@@ -110,7 +110,6 @@ return(
                 <div className="div7"> <div className='text-3xl font-medium pb-8'>Hard Skills <div className='text-xl font-mono'>(Extra stuff i know)</div></div> 
                 <li className='pb-8 text-xl font-medium'>COMPUTER ASSEMBLY</li> 
                 <li className='pb-8 text-xl font-medium'>PHOTO AND VIDEO EDITING</li> 
-                <li className='pb-8 text-xl font-medium'></li> 
                 </div> 
 
                 </div> 
