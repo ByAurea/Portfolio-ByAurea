@@ -7,7 +7,7 @@ import { MdEmail } from 'react-icons/md';
 
 export default function Menu() {
   return (
-    <div className="relative z-50 flex items-center justify-center min-h-screen">
+    <div className="relative z-50 flex items-center justify-center min-h-screen" style={{ overflow: 'hidden' }}>
 
       <div className="absolute inset-0">
         <div className="absolute -top-30 -left-30 w-80 h-80 rounded-full bg-purple-500 blur-3xl z-10 opacity-30"></div>
