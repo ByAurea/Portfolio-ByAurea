@@ -124,3 +124,11 @@ grid-row-gap: 0px;
     from, to { border-color: transparent }
     50% { border-color: rgb(255, 255, 255); }
 }
+
+
+
+
+
+body {
+  overflow: hidden;
+}

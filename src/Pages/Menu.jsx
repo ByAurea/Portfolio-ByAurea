@@ -8,6 +8,14 @@ import { MdEmail } from 'react-icons/md';
 export default function Menu() {
   return (
     <div className="relative z-50 flex items-center justify-center min-h-screen">
+
+      <div className="absolute inset-0">
+        <div className="absolute -top-30 -left-30 w-80 h-80 rounded-full bg-purple-500 blur-3xl z-10 opacity-30"></div>
+        <div className="absolute -top-30 -right-30 w-80 h-80 rounded-full bg-red-500 blur-3xl z-10 opacity-30"></div>
+        <div className="absolute -bottom-30 -left-30 w-80 h-80 rounded-full bg-blue-500 blur-3xl z-10 opacity-30"></div>
+        <div className="absolute -bottom-30 -right-30 w-80 h-80 rounded-full bg-pink-500 blur-3xl z-10 opacity-30"></div>
+      </div>
+
       <div className="text-white text-center ">
 
         <div className="pb-20">
@@ -24,11 +32,11 @@ export default function Menu() {
 
           <a href="../public/ÁUREA-RESUME.pdf" className="  text-center items-center text-3xl font-semibold transition relative after:content-[''] after:absolute after:w-0 after:h-0.5 after:bottom-0 after:left-1/2 after:bg-current after:transition-all after:duration-300 after:transform after:-translate-x-1/2 hover:after:w-full hover:drop-shadow-[0_0_10px_white]">My Resume</a>
 
-          <div className="flex pt-5">
-            <a href="" className="pr-5 hover:drop-shadow-[0_0_10px_white] transition duration-300"><FaInstagram size={40} /></a>
-            <a href="" className="pr-5 hover:drop-shadow-[0_0_10px_white] transition duration-300"><FaLinkedin size={40} /></a>
-            <a href="" className="pr-5 hover:drop-shadow-[0_0_10px_white] transition duration-300"><FaGithub size={40} /></a>
-            <a href="" className="pr-5 hover:drop-shadow-[0_0_10px_white] transition duration-300"><MdEmail size={40} /></a>
+          <div className="flex pt-5 z-50">
+            <a href="https://www.instagram.com/333.kitty/" className="pr-5 hover:drop-shadow-[0_0_10px_white] transition duration-300"><FaInstagram size={40} /></a>
+            <a href="https://www.linkedin.com/in/%C3%A1urea-s-carminato-757125254/" className="pr-5 hover:drop-shadow-[0_0_10px_white] transition duration-300"><FaLinkedin size={40} /></a>
+            <a href="https://github.com/ByAurea" className="pr-5 hover:drop-shadow-[0_0_10px_white] transition duration-300"><FaGithub size={40} /></a>
+            <a href="mailto:aureascarminato@gmail.com" className="pr-5 hover:drop-shadow-[0_0_10px_white] transition duration-300"><MdEmail size={40} /></a>
 
           </div>
         </div>
