@@ -71,8 +71,8 @@ export default function Header(){
                             </button>
                             <a href="#" className="w-12 h-12 text-[12px] font-medium rounded-full bg-transparent border-2 border-white shadow-[0_0_10px_white] flex items-center justify-center transition duration-300 hover:cursor-pointer
                             hover:bg-white hover:text-black hover:shadow-[0_0_15px_white] hover:animate-pulse">PT-BR</a>
-                            <a href="#" className="w-12 h-12 text-[12px] font-medium rounded-full bg-transparent border-2 border-white shadow-[0_0_10px_white] flex items-center justify-center transition duration-300 hover:cursor-pointer
-                            hover:bg-white hover:text-black hover:shadow-[0_0_15px_white] hover:animate-pulse ">MENU</a>
+                            <Link to="/menu" className="w-12 h-12 text-[12px] font-medium rounded-full bg-transparent border-2 border-white shadow-[0_0_10px_white] flex items-center justify-center transition duration-300 hover:cursor-pointer
+                            hover:bg-white hover:text-black hover:shadow-[0_0_15px_white] hover:animate-pulse ">MENU</Link>
                         </div>
                     </div>
                 </nav>

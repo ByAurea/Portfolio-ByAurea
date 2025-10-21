@@ -18,7 +18,7 @@ export default function Home() {
         <div className="text-white text-center drop-shadow-lg">
           <img src={logo} alt="" className="h-12 block mx-auto drop-shadow-[0_0_15px_white]"/>
           <h1 className="text-4xl font-bold pb-3 pt-4 text-shadow-[0_0_20px_white]">Hello, i'm ByAurea</h1>
-          <p className="pb-1 text-[17px]">I'm currently a Software Engineering student at FIAP, and i just love making landing-pages.</p>
+          <p className="pb-1 text-[17px]">I'm currently a Software Engineering student at FIAP, and I just love making landing-pages.</p>
           <p className="pb-1 text-[17px]">Here you can check out some of my projects and also get to know me more!</p>
           <div className="border-b opacity-65 drop-shadow-[0_0_3px_white]"></div>
           <p className="pt-3 pb-2 animate-pulse font-medium text-[21px]">What would you like to do first?</p>
