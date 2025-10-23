@@ -1,0 +1,41 @@
+/* Fundo animado */
+.blob-outer-container {
+    position: fixed;
+    height: 100%;
+    width: 100%;
+    z-index: -1;
+    inset: 0;
+    margin: auto;
+    filter: blur(100px);
+}
+
+.blob-inner-container {
+    border-radius: 99999px;
+    position: absolute;
+    inset: 0;
+    margin: auto;
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+    transform: scale(0.8);
+}
+
+.blob {
+    position: absolute;
+    width: 100vw;
+    height: 100vh;
+    inset: 0;
+    margin: auto;
+    background: conic-gradient(from 0deg, #ff0062, #cc00ff, #6026ab, #1100ff, #8c00ff, #cc00ff, #ff0062);
+    animation: spinBlob 5s linear infinite;
+}
+
+@keyframes spinBlob {
+    0% {
+        transform: rotate(0deg) scale(3); /* Aumente a escala inicial para garantir que cubra telas menores */
+    }
+
+    100% {
+        transform: rotate(1turn) scale(3); /* Aumente a escala final */
+    }
+}

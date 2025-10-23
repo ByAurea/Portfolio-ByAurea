@@ -1,0 +1,61 @@
+/* Menu background with blurred circles */
+.relative.z-50.flex.items-center.justify-center.min-h-screen {
+  overflow: hidden;
+}
+
+.absolute.inset-0 {
+  position: absolute;
+  inset: 0;
+}
+
+.absolute.-top-30.-left-30.w-80.h-80.rounded-full.bg-purple-500.blur-3xl.z-10.opacity-30 {
+  position: absolute;
+  top: -120px;
+  left: -120px;
+  width: 320px;
+  height: 320px;
+  border-radius: 50%;
+  background: #a855f7;
+  filter: blur(48px);
+  z-index: 10;
+  opacity: 0.3;
+}
+
+.absolute.-top-30.-right-30.w-80.h-80.rounded-full.bg-red-500.blur-3xl.z-10.opacity-30 {
+  position: absolute;
+  top: -120px;
+  right: -120px;
+  width: 320px;
+  height: 320px;
+  border-radius: 50%;
+  background: #ef4444;
+  filter: blur(48px);
+  z-index: 10;
+  opacity: 0.3;
+}
+
+.absolute.-bottom-30.-left-30.w-80.h-80.rounded-full.bg-blue-500.blur-3xl.z-10.opacity-30 {
+  position: absolute;
+  bottom: -120px;
+  left: -120px;
+  width: 320px;
+  height: 320px;
+  border-radius: 50%;
+  background: #3b82f6;
+  filter: blur(48px);
+  z-index: 10;
+  opacity: 0.3;
+}
+
+.absolute.-bottom-30.-right-30.w-80.h-80.rounded-full.bg-pink-500.blur-3xl.z-10.opacity-30 {
+  position: absolute;
+  bottom: -120px;
+  right: -120px;
+  width: 320px;
+  height: 320px;
+  border-radius: 50%;
+  background: #ec4899;
+  filter: blur(48px);
+  z-index: 10;
+  opacity: 0.3;
+}

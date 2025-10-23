@@ -1,0 +1,68 @@
+/* Stars background */
+.space-bg {
+  background: black;
+  position: relative;
+  overflow: hidden;
+  min-height: 100vh;
+}
+
+.star {
+  position: absolute;
+  background: white;
+  border-radius: 50%;
+  animation: twinkle 2s infinite ease-in-out;
+  z-index: 2;
+}
+
+@keyframes twinkle {
+  0%, 100% { opacity: 0.3; transform: scale(1); }
+  50% { opacity: 1; transform: scale(1.2); }
+}
+
+.aura {
+  position: fixed;
+  width: 700px;
+  height: 700px;
+  background: rgba(224, 198, 255, 0.932);
+  border-radius: 50%;
+  filter: blur(300px);
+  opacity: 0;
+  transition: opacity 2s ease-in-out;
+  z-index: 1;
+  pointer-events: none;
+  animation: pulse;
+}
+
+.aura.visible {
+  opacity: 1;
+}
+
+/* fade animation */
+.fade-enter, .fade-exit {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+}
+
+.fade-enter {
+  opacity: 0;
+}
+
+.fade-enter-active {
+  opacity: 1;
+  transition: opacity 200ms ease-in-out;
+}
+
+.fade-exit {
+  opacity: 1;
+}
+
+.fade-exit-active {
+  opacity: 0;
+  transition: opacity 200ms ease-in-out;
+}
+
+.projectstext{
+  color: #0000002a;
+}
