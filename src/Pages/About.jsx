@@ -2,7 +2,7 @@ import React, { useState, useEffect, useMemo, useRef } from 'react';
 import me from '../imgs/me.jpeg';
 import study from '../imgs/class.jpeg';
 import { HiArrowCircleDown } from 'react-icons/hi';
-import './About.css';
+import '../Style/About.css';
 
 function About() {
 

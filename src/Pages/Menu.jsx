@@ -3,7 +3,7 @@ import { FaInstagram } from 'react-icons/fa';
 import { FaLinkedin } from 'react-icons/fa';
 import { FaGithub } from 'react-icons/fa';
 import { MdEmail } from 'react-icons/md';
-import './Menu.css';
+import '../Style/Menu.css';
 
 
 export default function Menu() {

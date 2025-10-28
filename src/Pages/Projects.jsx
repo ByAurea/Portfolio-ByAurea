@@ -1,7 +1,7 @@
 import React, { useState, useEffect, useMemo } from 'react';
 import { FaArrowUpRightFromSquare } from "react-icons/fa6";
 import { RiArrowRightUpLine } from 'react-icons/ri';
-import './Projects.css';
+import '../Style/Projects.css';
 
 function Projects() {
 

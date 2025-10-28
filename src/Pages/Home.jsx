@@ -1,7 +1,7 @@
 import { FaArrowUpRightFromSquare } from "react-icons/fa6";
 import logo from '../imgs/MyLogo.png';
 import { Link } from "react-router-dom";
-import './Home.css';
+import '../Style/Home.css';
 
 export default function Home() {
   return (
