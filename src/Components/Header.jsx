@@ -1,6 +1,7 @@
 import logo from '../imgs/MyLogo.png';
 import { useState, useEffect, useRef } from 'react';
 import { Link } from "react-router-dom";
+import '../Style/Header.css';
 
 const songs = [
     "src/songs/shiny.mp4",
@@ -50,14 +51,14 @@ export default function Header(){
             <header className="absolute top-0 left-0 w-full z-[60]">
                 <nav className="">
                     <div className="flex justify-between items-center w-full text-white">
-                        <div className="drop-shadow-[0_0_10px_white] transition ease-in hover:drop-shadow-[0_0_15px_white] hover:scale-125">
+                        <div className="drop-shadow-[0_0_10px_white] transition ease-in hover:drop-shadow-[0_0_15px_white] hover:scale-125 header-logo">
                             <Link to="/">
-                                <img src={logo} alt="ByAurea logo" className='h-13 pl-20 mt-20'/>
+                                <img src={logo} alt="ByAurea logo" className='h-13 pl-20'/>
                             </Link>
                         </div>
-                        <div className="flex gap-8 pr-10 mt-20 mr-13 drop-shadow-[0_0_10px_white]">
+                        <div className="flex gap-8 pr-10 mt-20 mr-13 drop-shadow-[0_0_10px_white] header-nav">
                             <button className="w-12 h-12 text-[12px] font-medium rounded-full bg-transparent border-2 border-white shadow-[0_0_10px_white] flex items-center justify-center transition duration-300 hover:cursor-pointer
-                            hover:shadow-[0_0_20px_white] hover:animate-pulse " onClick={() => {
+                            hover:shadow-[0_0_20px_white] hover:animate-pulse header-button" onClick={() => {
                                 if (!hasStarted) {
                                     setHasStarted(true);
                                 }
@@ -70,9 +71,9 @@ export default function Header(){
                                 </svg>
                             </button>
                             <a href="#" className="w-12 h-12 text-[12px] font-medium rounded-full bg-transparent border-2 border-white shadow-[0_0_10px_white] flex items-center justify-center transition duration-300 hover:cursor-pointer
-                            hover:bg-white hover:text-black hover:shadow-[0_0_15px_white] hover:animate-pulse">PT-BR</a>
+                            hover:bg-white hover:text-black hover:shadow-[0_0_15px_white] hover:animate-pulse header-button">PT-BR</a>
                             <Link to="/menu" className="w-12 h-12 text-[12px] font-medium rounded-full bg-transparent border-2 border-white shadow-[0_0_10px_white] flex items-center justify-center transition duration-300 hover:cursor-pointer
-                            hover:bg-white hover:text-black hover:shadow-[0_0_15px_white] hover:animate-pulse ">MENU</Link>
+                            hover:bg-white hover:text-black hover:shadow-[0_0_15px_white] hover:animate-pulse header-button">MENU</Link>
                         </div>
                     </div>
                 </nav>
