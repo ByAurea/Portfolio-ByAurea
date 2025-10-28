@@ -53,7 +53,7 @@ export default function Header(){
                     <div className="flex justify-between items-center w-full text-white">
                         <div className="drop-shadow-[0_0_10px_white] transition ease-in hover:drop-shadow-[0_0_15px_white] hover:scale-125 header-logo">
                             <Link to="/">
-                                <img src={logo} alt="ByAurea logo" className='h-13 pl-20'/>
+                                <img src={logo} alt="ByAurea logo"/>
                             </Link>
                         </div>
                         <div className="flex gap-8 pr-10 mt-20 mr-13 drop-shadow-[0_0_10px_white] header-nav">
