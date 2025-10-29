@@ -32,10 +32,171 @@
 
 @keyframes spinBlob {
     0% {
-        transform: rotate(0deg) scale(3); /* Aumente a escala inicial para garantir que cubra telas menores */
+        transform: rotate(0deg) scale(3); 
     }
 
     100% {
-        transform: rotate(1turn) scale(3); /* Aumente a escala final */
+        transform: rotate(1turn) scale(3);
     }
+}
+
+/* Home Responsiveness */
+
+/* Extra small devices (phones, 320px and up) */
+@media (max-width: 319px) {
+
+    .home-container {
+    padding-left: 15px;
+    padding-right: 15px;
+    padding-top: 30px;
+  }
+
+  .home-logo {
+    height: 2.3rem !important;
+    width: auto !important;
+  }
+  .home-title {
+    font-size: 1.5rem !important;
+  }
+  .home-text {
+    font-size: 16px !important;
+  }
+  .home-text-pulse {
+    font-size: 17px !important;
+  }
+  .home-links-container {
+    gap: 1rem !important;
+  }
+  .home-link {
+    font-size: 1rem !important;
+  }
+}
+
+/* Small devices (phones, 320px and up) */
+@media (min-width: 320px) and (max-width: 509px) {
+
+  .home-container {
+    padding-left: 30px;
+    padding-right: 30px;
+    padding-top: 50px;
+  }
+
+  .home-logo {
+    height: 2.8rem !important;
+    width: auto !important;
+  }
+  .home-title {
+    font-size: 1.875rem !important; 
+  }
+  .home-text {
+    font-size: 17.5px !important;
+  }
+  .home-text-pulse {
+    font-size: 18px !important;
+  }
+  .home-links-container {
+    gap: 1.5rem !important;
+  }
+  .home-link {
+    font-size: 1.125rem !important; 
+  }
+}
+
+/* Medium devices (tablets, 480px and up) */
+@media (min-width: 510px) and (max-width: 767px) {
+
+  .home-container {
+    padding-left: 50px;
+    padding-right: 50px;
+  }
+
+  .home-logo {
+    height: 3rem !important;
+    width: auto !important;
+  }
+  .home-title {
+    font-size: 2rem !important;
+  }
+  .home-text {
+    font-size: 18px !important;
+
+  }
+  .home-text-pulse {
+    font-size: 18.5px !important;
+  }
+  .home-links-container {
+    gap: 2rem !important;
+  }
+  .home-link {
+    font-size: 1.2rem !important; 
+  }
+}
+
+/* Large devices (desktops, 768px and up) */
+@media (min-width: 768px) and (max-width: 1023px) {
+  .home-logo {
+    height: 3.4rem !important;
+    width: auto !important;
+  }
+  .home-title {
+    font-size: 2.2rem !important; 
+  }
+  .home-text {
+    font-size: 18px !important;
+  }
+  .home-text-pulse {
+    font-size: 18.5px !important;
+  }
+  .home-links-container {
+    gap: 2.5rem !important;
+  }
+  .home-link {
+    font-size: 1.2rem !important;
+  }
+}
+
+/* Extra large devices (large desktops, 1024px and up) */
+@media (min-width: 1024px) and (max-width: 1439px) {
+  .home-logo {
+    height: 3.8rem !important;
+    width: auto !important;
+  }
+  .home-title {
+    font-size: 2.3rem !important;
+  }
+  .home-text {
+    font-size: 19px !important;
+  }
+  .home-text-pulse {
+    font-size: 20px !important;
+  }
+  .home-links-container {
+    gap: 3rem !important;
+  }
+  .home-link {
+    font-size: 1.25rem !important;
+  }
+}
+
+/* Extra extra large devices (1440px and up) */
+@media (min-width: 1440px) {
+  .home-logo {
+    height: 4rem !important;
+    width: auto !important;
+  }
+  .home-title {
+    font-size: 2.5rem !important;
+  }
+  .home-text {
+    font-size: 20px !important;
+  }
+  .home-text-pulse {
+    font-size: 21px !important;
+  }
+  .home-links-container {
+    gap: 3.5rem !important;
+  }
+  .home-link {
+    font-size: 1.25rem !important;
+  }
 }
