@@ -3,7 +3,7 @@ import me from '../imgs/me.jpeg';
 import study from '../imgs/class.jpeg';
 import { HiArrowCircleDown } from 'react-icons/hi';
 import '../Style/About.css';
-import SplashCursor from '../Components/SplashCursor';
+// import SplashCursor from '../Components/SplashCursor';
 
 function About() {
 
@@ -53,7 +53,6 @@ function About() {
 
 return(
     <>
-    <SplashCursor />
             <div className="">
 
                 {/* Texto Typing */}
