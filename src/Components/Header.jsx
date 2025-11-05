@@ -4,9 +4,9 @@ import { Link } from "react-router-dom";
 import '../Style/Header.css';
 
 const songs = [
-    "src/songs/shiny.mp4",
-    "src/songs/Clouds.mp4",
-    "src/songs/Im-God.mp4"
+    "/songs/shiny.mp4",
+    "/songs/Clouds.mp4",
+    "/songs/Im-God.mp4"
 ];
 
 export default function Header(){
