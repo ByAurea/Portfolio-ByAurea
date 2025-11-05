@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import me from '../imgs/me.jpeg';
 import study from '../imgs/class.jpeg';
 import { HiArrowCircleDown } from 'react-icons/hi';
@@ -7,6 +7,8 @@ import '../Style/About.css';
 function About() {
 
     const [arrowOpacity, setArrowOpacity] = useState(0);
+    const [isVisible, setIsVisible] = useState(false);
+    const contentRef = useRef(null);
 
     useEffect(() => {
         const timer = setTimeout(() => {
@@ -21,6 +23,25 @@ function About() {
             }, 50);
         }, 3000);
         return () => clearTimeout(timer);
+    }, []);
+
+    useEffect(() => {
+        const observer = new IntersectionObserver(
+            ([entry]) => {
+                setIsVisible(entry.isIntersecting);
+            },
+            { threshold: 0.1 }
+        );
+
+        if (contentRef.current) {
+            observer.observe(contentRef.current);
+        }
+
+        return () => {
+            if (contentRef.current) {
+                observer.unobserve(contentRef.current);
+            }
+        };
     }, []);
 
 
@@ -41,14 +62,14 @@ return(
                     </div>
                     <div className='pt-10 hover:pointer-cursor' style={{ opacity: arrowOpacity }}>
                         <button className='hover:pointer-cursor animate-bounce about-arrow' onClick={() => window.scrollTo({ top: window.innerHeight, behavior: 'smooth' })}>
-                        <HiArrowCircleDown size={40} color='#ffffff'/>
+                        <HiArrowCircleDown size={50} color='#ffffff'/>
                         </button>
                     </div>
                 </div>
 
                 {/* Conteúdo da página */}
 
-                <div className="parent text-white pt-20 z-550 ">
+                <div ref={contentRef} className={`parent text-white pt-20 z-550 transition-all duration-2000 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-20 translate-y-10'}`}>
 
                 <div className="flex flex-row items-center justify-center pl-40 pr-40">
                     <div className="div2 relative z-10 flex drop-shadow-[0_0_10px_white] justify-center mr-8"> <img src={me} alt="" className=" w-185 h-60 rounded-xl border-white border-2 hover:drop-shadow-[0_0_20px_white] transition ease-in" /> </div>
